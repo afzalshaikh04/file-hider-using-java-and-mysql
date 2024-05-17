@@ -8,12 +8,12 @@ public class MyConnection {
     public static Connection getConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/?user=root","root","789");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/file_hider","root","789");
         }
         catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("Connection ho gya saab");
+        System.out.println("Connection Successful!");
         return connection;
     }
     public static void closeConnection() {
